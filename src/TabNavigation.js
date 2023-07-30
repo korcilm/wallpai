@@ -1,12 +1,11 @@
 import React from 'react';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Home2, Heart, Setting } from 'iconsax-react-native';
+import { Home2, Heart } from 'iconsax-react-native';
 import { useColorScheme } from 'react-native';
 
 import Favourites from './screens/Favourites';
 import Home from './screens/Home';
-import Settings from './screens/Settings';
 
 const Tab = createBottomTabNavigator();
 
@@ -44,7 +43,7 @@ const TabNavigation = () => {
             ),
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="settings"
         component={Settings}
         options={{
@@ -55,7 +54,7 @@ const TabNavigation = () => {
               <Setting size={size} color={iconDefaultColor} />
             ),
         }}
-      />
+      /> */}
     </Tab.Navigator>
   );
 };
