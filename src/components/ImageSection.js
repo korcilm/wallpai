@@ -29,33 +29,38 @@ const ImageSection = ({ sectionTitle,direction, images }) => {
 //         "x": 0}
     const pictures = [{
         "id": 1,
-        "title": "Art",
-        "url": "https://e1.pxfuel.com/desktop-wallpaper/590/461/desktop-wallpaper-best-walpaper-by-sahaptanrikulu.jpg",
-        "thumbnailUrl": "http://via.placeholder.com/150/92c952"
+        "name": "Winter night",
+        "categoryName": "Digital Art",
+        "source": "https://e1.pxfuel.com/desktop-wallpaper/590/461/desktop-wallpaper-best-walpaper-by-sahaptanrikulu.jpg",
+        "x": 0
     },
     {
         "id": 2,
-        "title": "Universe",
-        "url": "https://w0.peakpx.com/wallpaper/40/813/HD-wallpaper-walpaper-zedge.jpg",
-        "thumbnailUrl": "http://via.placeholder.com/150/771796"
+        "name": "Universe",
+        "categoryName": "Universe Space",
+        "source": "https://w0.peakpx.com/wallpaper/40/813/HD-wallpaper-walpaper-zedge.jpg",
+        "x": 0
     },
     {
         "id": 3,
-        "title": "Nature",
-        "url": "https://i.pinimg.com/736x/2b/bf/bd/2bbfbdbfc80226ecb9af283184625ac4.jpg",
-        "thumbnailUrl": "http://via.placeholder.com/150/24f355"
+        "name": "Nature",        
+        "categoryName": "Universe Space",
+        "source": "https://i.pinimg.com/736x/2b/bf/bd/2bbfbdbfc80226ecb9af283184625ac4.jpg",
+        "x": 0
     },
     {
         "id": 4,
-        "title": "Flower",
-        "url": "https://image.winudf.com/v2/image/Y29tLmRpdi5hYnN0cnZpZDEyX3NjcmVlbnNob3RzXzBfYTFlODQwNmM/screen-0.webp?fakeurl=1&type=.webp",
-        "thumbnailUrl": "http://via.placeholder.com/150/d32776"
+        "name": "Flower",        
+        "categoryName": "Plants",
+        "source": "https://image.winudf.com/v2/image/Y29tLmRpdi5hYnN0cnZpZDEyX3NjcmVlbnNob3RzXzBfYTFlODQwNmM/screen-0.webp?fakeurl=1&type=.webp",
+        "x": 0
     },
     {
         "id": 5,
-        "title": "Cartoon",
-        "url": "https://e0.pxfuel.com/wallpapers/672/259/desktop-wallpaper-for-iphone-walpaper-iphone-lock-screen-flowers-cute-tropical-flowers-tumblr-thumbnail.jpg",
-        "thumbnailUrl": "http://via.placeholder.com/150/f66b97"
+        "title": "Cartoon",        
+        "categoryName": "Cartoons",
+        "source": "https://e0.pxfuel.com/wallpapers/672/259/desktop-wallpaper-for-iphone-walpaper-iphone-lock-screen-flowers-cute-tropical-flowers-tumblr-thumbnail.jpg",
+        "x": 0
     }]
 
     return (
@@ -73,7 +78,7 @@ const ImageSection = ({ sectionTitle,direction, images }) => {
                         <Image
                             style={[styles.wallThumbnail,{}]}
                             source={{
-                                uri: obj.url,
+                                uri: obj.source,
                             }} />
                         <LottieView
                             source={FavouriteAnim}

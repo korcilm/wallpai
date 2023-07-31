@@ -15,8 +15,7 @@ import {
   Linking,
 } from 'react-native';
 import Modal from 'react-native-modal';
-//import SetWallpaperAndroid from 'react-native-set-wallpaper';
- import { SetWallpaperAndroid } from '../Modules';
+import  SetWallpaperAndroid from '../Modules';
 
 // eslint-disable-next-line react/prop-types
 const SetWall = ({ route }) => {
@@ -24,7 +23,7 @@ const SetWall = ({ route }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [creatorModalVisible, setCreatorModalVisible] = useState(false);
   const [loader, setLoader] = useState({ flag: null, loading: false });
-
+  //const { SetWallpaperAndroid } = NativeModules;
   const setWallOptions = [
     {
       title: 'Home Screen',
@@ -47,7 +46,7 @@ const SetWall = ({ route }) => {
     console.log(Platform.OS)
     setLoader({ flag: obj.flag, loading: true });
     if (Platform.OS === 'android') {
-      SetWallpaperAndroid.setWallpaper(imageObj.url, obj.flag, (isWallpaperSet) => {
+      SetWallpaperAndroid.setWallpaper(imageObj.source, obj.flag, (isWallpaperSet) => {
         setLoader({ flag: obj.flag, loading: false });
         if (isWallpaperSet) {
           setModalVisible(false);
@@ -59,7 +58,7 @@ const SetWall = ({ route }) => {
   return (
     <>
       <View style={{ flex: 1 }}>
-        <Image style={styles.image} source={{ uri: imageObj.url }} />
+        <Image style={styles.image} source={{ uri: imageObj.source }} />
       </View>
       <View style={styles.wallInfo}>
         {imageObj.creator && imageObj.creator.name ? (
